@@ -199,7 +199,7 @@ export const setLocaleCookie = (locale, res, { useCookie, cookieDomain, cookieKe
 
   if (process.client) {
     JsCookie.set(cookieKey, locale, cookieOptions)
-  } else if (res) {
+  } else if (res && false) {
     let headers = res.getHeader('Set-Cookie') || []
     if (typeof headers === 'string') {
       headers = [headers]
